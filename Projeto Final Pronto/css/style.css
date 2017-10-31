@@ -1,0 +1,284 @@
+
+			.fundo { /*cor de fundo da página*/
+				background-color: white;
+			}
+			
+			p{
+				text-align: justify;
+			}
+			
+			a {
+				text-decoration: none;
+			}
+			
+			ul {
+				list-style: none;
+			}
+			
+			#importHeader { /* Id para importar o Header*/
+				position: fixed;
+				z-index: 1; /* para ficar na frente e as coisas subirem atraz */
+				width: 80%;
+			}
+			
+			#opacidade__header{
+				opacity: 1;
+				position: fixed;
+				z-index: 1;
+				margin-top:0px;
+				transition: 0.7s;
+			}
+			
+			/* CAROUSEL COMEÇA AQUI*/
+			
+			.container {
+				width: 90%;
+				max-width: 100%;
+				
+				padding:5%;
+				/*margin: auto; manda para o meio se precisar*/
+			}
+			
+			.carousel_display_container {
+				position: relative; /* ja coloca as setas dentro do carrossel */
+			}
+			
+			.button_cor { /* Define as cores do botão do CARROSSEL*/
+				color: #fff;
+				background-color: black;
+			}
+			
+			.button_display_left {
+				position:absolute;
+				top: 50%; /*manter no meio da pag*/
+				left: 0%;
+				transform: translate(0%,-50%);
+			}
+			
+			.button_display_right {
+				position: absolute;
+				top: 50%;
+				right: 0%;
+				transform: translate(0%,-50%);
+				-ms-transform: translate(0%,-50%);
+			}
+			
+			/* Parte dos nomes nos carrosseis*/
+			
+			.carousel__nomes {
+				font-size: 18px !important;
+				background-color: black;
+				color: white;
+				padding: 16px;
+			}
+			
+			.carousel__nomes:hover{
+				color:pink;
+			}
+			
+			#carousel__nomes-left {
+				position: absolute;
+				left: 0;
+				bottom: 0;
+			}
+			
+			#carousel__nomes-right {
+				position: absolute;
+				right: 0;
+				bottom: 0;
+			}
+			
+			#carousel__nomes-topLeft {
+				position: absolute;
+				top: 0;
+				left: 0;
+			}
+			
+			#carousel__nomes-topRight {
+				position: absolute;
+				top: 0;
+				right: 0;
+			}
+			
+		
+			
+			/* Carousel ACABA aqui*/
+			
+			/* Imagens Miniatura fundo */
+			
+			.miniatura {
+				width: 100%;
+				max-width: 100%;
+				float:left;
+			}
+			
+			.miniatura a:hover{
+				color: pink;
+			}
+			
+			.miniatura__img{
+				width: 40%;
+				border: 5px solid white;
+				box-shadow: 3px 3px 5px black;
+			}
+			
+			.minuatura__titulo {
+				font-size: 15px;
+				text-align: center;
+				color: rgba(0, 0, 0, 0.8);
+			}
+			
+			.miniatura p{
+				text-align: center;
+				color: rgba(0, 0, 0, 0.7);
+			}
+			
+			.miniatura p:hover{
+				color:brown;
+			}
+			
+			.miniatura h2:hover{
+				color:brown;
+			}
+			
+			/* BOLO DE MILHO */
+			
+			#milho{
+				width: 100%;
+				max-width: 100%;
+				float:left;
+			}
+			
+			#milho h2, h3{
+				color: rgba(0,0,0,0.8);
+				text-align: center;
+			}
+			
+			
+			
+			#milho p{
+				font-size: 18px;
+				text-align: justify;
+			}
+			
+			/*.milho__alinhar{
+				display: -webkit-flex;
+				display: flex; // mantem todos os elementos dentro alinhados em sequencia
+				
+			}*/
+			
+			
+			/* Botão Encomenda */
+			
+			.botao--encomenda{
+				display: inline-block;
+				border-radius: 5px; /*deixar os lados redondinhos*/
+				background-color: green;
+				border: none; /*tira as bordas que vem por padrao*/
+				color: white;
+				text-align: center;
+				padding: 12px;
+				width: 170px;
+				font-size: 15px;
+				transition: all 0.5s;
+				cursor: pointer; /* aparece a maozinha*/
+				margin: 5px;
+			}
+			
+			.botao--encomenda span{
+				cursor: pointer;
+				display: inline-block;
+				position: relative;
+				transition: 0.5s;
+			}
+			
+			.botao--encomenda span:after{
+				content: '\00bb'; /* Setinhas */
+				position: absolute;
+				opacity: 0; /* A seta nao aparece até a opacidade ser alterada */
+				top: 0;
+				right: -20px;
+				transition: 0.5s;
+			}
+			
+			.botao--encomenda:hover span{
+				padding-right: 24px; /* quando cursor passar em cima, escrita vai para a direita*/
+			}
+			
+			.botao--encomenda:hover span:after{ /* quando for em cima do botao,  aparece o 'icone' */
+				opacity: 1;
+				right: 0;
+			}
+			
+			/* O POPULAR DA SEMANA */
+			
+			#popular{
+				width: 100%;
+				max-width: 100%;
+				float:left;
+			}
+			
+			#popular h2, h3{
+				text-align: center;
+				color: rgba(0,0,0,0.8);
+			}
+			
+			#popular p{
+				font-size: 16.5px;
+			}
+			
+			/*Importar o Footer*/
+			#importFooter { /* Id para importar o Footer*/
+				position: absolute;
+				width: 80%;
+				height: 35%;
+			}
+			
+			#footer__seta{
+				color: rgba(0, 0, 0, 0.7);
+				margin-left: 5%;
+				margin-top: 5%;
+				font-size: 3em;
+			}
+			
+			#footer__seta:hover{
+				color:green;
+			}
+			
+			
+			/* AQUI COMEÇA PARA APARELHOS >= 600px */
+			
+			@media screen and (min-width: 800px) {
+				
+				/*#conteinerMiniatura {
+					display: -webkit-flex;
+					display: flex; /* mantem todos os elementos dentro alinhados em sequencia*/
+				/*}*/
+				
+				/* Deixa Carousel e Miniatura Lado a Lado*/
+				.esq{
+					float: left;
+					width:65%;
+				}
+				.dir{
+					float: right;
+					width: 35%;
+				}
+				
+				h2 {
+					font-size: 40px;
+				}
+				
+				h3{
+					font-size: 30px;
+				}
+				
+				h4{
+					font-size: 22px;
+				}
+				
+				p{
+					font-size: 22px;
+				}
+				
+			}

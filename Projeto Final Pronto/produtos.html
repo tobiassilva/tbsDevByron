@@ -1,0 +1,435 @@
+<html>
+	<head>
+		
+		<title>Produtos</title>
+		<meta charset="utf-8">
+		<!-- Abaixo: A largura = largura do dispositivo e zoon inicial = 1 -->
+		<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">﻿
+		<style type="text/css">
+			
+			body{
+				background: url(imagens/fundoAmarelo.png) 0 0 repeat !important;
+				margin: 0px 10% 20px 10%;
+			}
+			
+			#importHeader { /* Id para importar o Header*/
+				position: fixed;
+				z-index: 1; /* para ficar na frente e as coisas subirem atraz */
+				width: 80%;
+			}
+			
+			#opacidade__header{
+				opacity: 1;
+				position: fixed;
+				z-index: 1;
+				margin-top:0px;
+				transition: 0.7s;
+			}
+			
+			#fundo{
+				background-color: white;
+			}
+			
+			h2, h1, h3, h4 {
+				text-align: center;
+			}
+			
+			
+			
+			/* Parte Referente ao BOTÃO DE ENVIO */
+			.botao--envio{
+				display: inline-block;
+				border-radius: 5px; /*deixar os lados redondinhos*/
+				background-color: yellow;
+				border: none; /*tira as bordas que vem por padrao*/
+				color: black;
+				text-align: center;
+				padding: 12px;
+				width: 170px;
+				font-size: 15px;
+				transition: all 0.5s;
+				cursor: pointer; /* aparece a maozinha*/
+				margin: 5px;
+			}
+			
+			.botao--envio span{
+				cursor: pointer;
+				display: inline-block;
+				position: relative;
+				transition: 0.5s;
+			}
+			
+			.botao--envio span:after{
+				content: '\00bb'; /* Setinhas */
+				position: absolute;
+				opacity: 0; /* A seta nao aparece até a opacidade ser alterada */
+				top: 0;
+				right: -20px;
+				transition: 0.5s;
+			}
+			
+			.botao--envio:hover span{
+				padding-right: 24px; /* quando cursor passar em cima, escrita vai para a direita*/
+				color: gray;
+			}
+			
+			.botao--envio:hover span:after{ /* quando for em cima do botao,  aparece o 'icone' */
+				opacity: 1;
+				right: 0;
+			}
+			
+			#importFooter { /* Id para importar o Footer*/
+				position: absolute;
+				width: 80%;
+				height: 35%;
+			}
+			
+			@media screen and (min-width: 800px){
+				.esq{
+					float: left;
+					width:50%;
+				}
+				.dir{
+					float: right;
+					width: 50%;
+				}
+				
+				.alinhar-bolos{
+					display: -webkit-flex;
+					display: flex; 
+				}
+			
+				.alinhar-bolos div {
+					flex:1 1 auto;
+				}
+				.imagem{
+					width: 50%;
+				}
+				
+				.ingredientes{
+					width: 50%;
+				}
+			}
+		</style>
+		
+		
+		
+		
+	</head>
+	
+	<body>
+		<div id="opacidade__header">
+			<object id="importHeader" type="text/html" data="header.html"></object>
+		</div>
+		
+		<div id="fundo">
+		</br>
+		</br>
+		</br>
+		</br>
+		</br>
+		</br>
+		</br>
+		</br>
+			<h1>Conheça Melhor os Nossos Produtos</h1>
+			</br>
+			</br>
+			<h2>Bolo de Chocolate com Recheio</h2>
+			<div class="alinhar-bolos">
+				<div class="imagem">
+					<img src="imagens/bolo-de-chocolate-recheio.jpg" width="100%">
+				</div>
+				<div class="ingredientes">
+					<h3>INGREDIENTES</h3>
+					<h4>MASSA:</h4>
+					<ul>
+						<li>3 ovos</li>
+						<li>1 xícara e 1/2 de açúcar</li>
+						<li>1 xícara de leite quente</li>
+						<li>2 xícaras de trigo</li>
+						<li>1 xícara e 1/2 de nescau</li>
+						<li>1/2 xícara de óleo</li>
+						<li>1 colher de pó royal</li>
+					</ul>
+					<h4>RECHEIO:</h4>
+					<ul>
+						<li>1/2 litro de leite</li>
+						<li>1 lata de leite moça</li>
+						<li>4 colher de sopa de açúcar</li>
+						<li>3 colheres de maizena dissolvida</li>
+						<li>250 g de coco ralado</li>
+					</ul>
+					<h4>COBERTURA:</h4>
+					<ul>
+						<li>3 colheres de nescau</li>
+						<li>2 colher de margarina</li>
+						<li>1 lata de leite moça</li>
+					</ul>
+					<center>
+					<button id="btn-envioCho" class="botao--envio" style="vertical-align:middle;">
+						<span>Encomendar</span>
+					</button>
+				</center>
+				</div>
+			</div>
+			</br>
+			</br>
+			</br>
+			<h2>Bolo Formigueiro</h2>
+			<div class="alinhar-bolos">
+				<div class="imagem">
+					<img src="imagens/bolo-formigueiro.jpg" width="100%">
+				</div>
+				<div class="ingredientes">
+					<h3>INGREDIENTES</h3>
+					<h4>MASSA:</h4>
+					<ul>
+						<li>2 xícaras de farinha</li>
+						<li>2 xícaras de açúcar</li>
+						<li>1 colher de fermento em pó</li>
+						<li>3 ovos</li>
+						<li>1/2 xícara de óleo</li>
+						<li>1 xícara de leite</li>
+						<li>1/2 pacotinho de 100 g de chocolate granulado</li>
+					</ul>
+					<center>
+					<button id="btn-envioFor" class="botao--envio" style="vertical-align:middle;">
+						<span>Encomendar</span>
+					</button>
+				</center>
+				</div>
+			</div>
+			</br>
+			</br>
+			</br>
+			<h2>Bolo de Fubá</h2>
+			<div class="alinhar-bolos">
+				<div class="imagem">
+					<img src="imagens/bolo-de-fuba.jpg" width="100%">
+				</div>
+				<div class="ingredientes">
+					<h3>INGREDIENTES</h3>
+					<h4>MASSA:</h4>
+					<ul>
+						<li>3 ovos</li>
+						<li>2 xícaras (chá) de açúcar</li>
+						<li>2 xícaras (chá) de fubá</li>
+						<li>3 colheres (sopa) rasas de farinha de trigo</li>
+						<li>1/2 copo (americano) de óleo</li>
+						<li>1 copo de leite</li>
+						<li>1 colher (sopa) de fermento em pó</li>
+					</ul>
+					<center>
+					<button id="btn-envioFub" class="botao--envio" style="vertical-align:middle;">
+						<span>Encomendar</span>
+					</button>
+				</center>
+				</div>
+			</div>
+			</br>
+			</br>
+			</br>
+			<h2>Bolo de Laranja</h2>
+			<div class="alinhar-bolos">
+				<div class="imagem">
+					<img src="imagens/bolo-de-laranja.jpg" width="100%">
+				</div>
+				<div class="ingredientes">
+					<h3>INGREDIENTES</h3>
+					<h4>MASSA:</h4>
+					<ul>
+						<li>4 ovos</li>
+						<li>2 xícaras (chá) de açúcar</li>
+						<li>1 xícara (chá) de óleo</li>
+						<li>suco de 2 laranjas</li>
+						<li>casca de 1 laranja</li>
+						<li>2 xícaras (chá) de farinha de trigo</li>
+						<li>1 colher (sopa) de fermento</li>
+					</ul>
+					<center>
+					<button id="btn-envioLar" class="botao--envio" style="vertical-align:middle;">
+						<span>Encomendar</span>
+					</button>
+				</center>
+				</div>
+			</div>
+			</br>
+			</br>
+			</br>
+			<h2>Bolo de Maçã</h2>
+			<div class="alinhar-bolos">
+				<div class="imagem">
+					<img src="imagens/bolo-de-maca.jpg" width="100%">
+				</div>
+				<div class="ingredientes">
+					<h3>INGREDIENTES</h3>
+					<h4>MASSA:</h4>
+					<ul>
+						<li>2 maçãs</li>
+						<li>2 xícaras de farinha de trigo</li>
+						<li>2 xícaras de açúcar</li>
+						<li>1 xícara de óleo</li>
+						<li>1/2 xícara de leite</li>
+						<li>3 ovos</li>
+						<li>2 colheres de canela em pó</li>
+						<li>1 colher de fermento</li>
+					</ul>
+					<center>
+					<button id="btn-envioMac" class="botao--envio" style="vertical-align:middle;">
+						<span>Encomendar</span>
+					</button>
+				</center>
+				</div>
+			</div>
+			
+			</br>
+			</br>
+			</br>
+			<h2>Bolo de Milho Verde</h2>
+			<div class="alinhar-bolos">
+				<div class="imagem">
+					<img src="imagens/milho-verde.jpg" width="100%">
+				</div>
+				<div class="ingredientes">
+					<h3>INGREDIENTES</h3>
+					<h4>MASSA:</h4>
+					<ul>
+						<li>8 espigas de milho</li>
+						<li>3 ovos inteiros</li>
+						<li>2 colheres de margarina</li>
+						<li>1 xícara e 1/2 de açúcar</li>
+						<li>1/2 xícara de leite aproximadamente</li>
+						<li>3 colheres de farinha de trigo</li>
+						<li>1 colher rasa de fermento em pó</li>
+					</ul>
+					<center>
+					<button id="btn-envioMil" class="botao--envio" style="vertical-align:middle;">
+						<span>Encomendar</span>
+					</button>
+				</center>
+				</div>
+			</div>
+			
+			</br>
+			</br>
+			</br>
+			<h2>Bolo de Mousse de Maracujá</h2>
+			<div class="alinhar-bolos">
+				<div class="imagem">
+					<img src="imagens/maracuja.jpg" width="100%">
+				</div>
+				<div class="ingredientes">
+					<h3>INGREDIENTES</h3>
+					<h4>MASSA:</h4>
+					<ul>
+						<li>3 ovos</li>
+						<li>2 xícaras (chá) de açúcar</li>
+						<li>100g de manteiga em temperatura ambiente</li>
+						<li>1 xícara (chá) de suco concentrado de maracujá</li>
+						<li>2 xícaras (chá) de farinha de trigo</li>
+						<li>1 colher (sopa) de fermento em pó</li>
+						<li>1/4 de xícara (chá) de suco de maracujá concentrado</li>
+					</ul>
+					<h4>RECHEIO:</h4>
+					<ul>
+						<li>1 lata de leite condensado</li>
+						<li>1 xícara (chá) de suco de maracujá concentrado</li>
+						<li>1 lata de creme de leite sem soro</li>
+						<li>3 claras batidas em neve</li>
+						<li>1 envelope de gelatina em pó incolor</li>
+					</ul>
+					<h4>COBERTURA:</h4>
+					<ul>
+						<li>1 xícara (chá) de açúcar</li>
+						<li>1/2 xícara (chá) de água</li>
+						<li>1 clara</li>
+					</ul>
+					<center>
+					<button id="btn-envioMar" class="botao--envio" style="vertical-align:middle;">
+						<span>Encomendar</span>
+					</button>
+				</center>
+				</div>
+			</div>
+			
+			</br>
+			</br>
+			</br>
+			<h2>Bolo Napolitano</h2>
+			<div class="alinhar-bolos">
+				<div class="imagem">
+					<img src="imagens/bolo-napolitano.jpg" width="100%">
+				</div>
+				<div class="ingredientes">
+					<h3>INGREDIENTES</h3>
+					<h4>MASSA:</h4>
+					<ul>
+						<li>2 ovos inteiros</li>
+						<li>1/2 copo americano de oleo</li>
+						<li>1 copo americano de leite</li>
+						<li>1 copo americano de açúcar refinado</li>
+						<li>1 colher de chá de sal</li>
+						<li>2 copos americanos de farinha de trigo</li>
+						<li>1 colher de sopa de pó royal</li>
+						<li>1/2 copo americano de chocolate em pó</li>
+						<li>1/2 copo americano de nesquick</li>
+					</ul>
+					<center>
+					<button id="btn-envioNap" class="botao--envio" style="vertical-align:middle;">
+						<span>Encomendar</span>
+					</button>
+				</center>
+				</div>
+			</div>
+		
+		</div> <!-- acaba o id fundo -->
+		<script type="text/javascript">
+			/* OPACIDADE DO HEADER */
+			window.onscroll = function(){
+				var top = window.pageYOffset || document.documentElement.scrollTop
+				if( top > 120 ) {
+					document.getElementById("opacidade__header").style.opacity = "0.8";
+				} else{
+					document.getElementById("opacidade__header").style.opacity = "1";
+				}
+			}
+			
+			/* Botão Encomende Aqui */
+			document.getElementById("btn-envioCho").onclick = function() {
+				location.href="encomendar.html";
+			}
+			
+			document.getElementById("btn-envioFor").onclick = function() {
+				location.href="encomendar.html";
+			}
+			
+			document.getElementById("btn-envioFub").onclick = function() {
+				location.href="encomendar.html";
+			}
+			
+			document.getElementById("btn-envioLar").onclick = function() {
+				location.href="encomendar.html";
+			}
+			
+			document.getElementById("btn-envioMac").onclick = function() {
+				location.href="encomendar.html";
+			}
+			
+			document.getElementById("btn-envioMar").onclick = function() {
+				location.href="encomendar.html";
+			}
+			
+			document.getElementById("btn-envioMil").onclick = function() {
+				location.href="encomendar.html";
+			}
+			
+			document.getElementById("btn-envioNap").onclick = function() {
+				location.href="encomendar.html";
+			}
+			
+			
+		</script>
+		
+		<object id="importFooter" type="text/html" data="footer.html"></object>
+	</body>
+</html>

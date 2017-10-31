@@ -1,0 +1,208 @@
+<html>
+	<head>
+		
+		<title>Sobre Nós</title>
+		<meta charset="utf-8">
+		<!-- Abaixo: A largura = largura do dispositivo e zoon inicial = 1 -->
+		<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">﻿
+		<style type="text/css">
+			
+			body{
+				background: url(imagens/fundoAzul.png) 0 0 repeat !important;
+				margin: 0px 10% 20px 10%;
+			}
+			
+			#importHeader { /* Id para importar o Header*/
+				position: fixed;
+				z-index: 1; /* para ficar na frente e as coisas subirem atraz */
+				width: 80%;
+			}
+			
+			#opacidade__header{
+				opacity: 1;
+				position: fixed;
+				z-index: 1;
+				margin-top:0px;
+				transition: 0.7s;
+			}
+			
+			#fundo{
+				background-color: white;
+			}
+			
+			h1{
+				text-align: center;
+				color: blue;
+				font-family: arial;
+			}
+			
+			h3{
+				text-align: center;
+				font-family: arial;
+			}
+			
+			p{
+				font-size: 16.5px;
+			}
+			
+			.dir {
+				margin-left: 10%;
+				margin-right: 10%;
+			}
+			
+			
+			#importFooter { /* Id para importar o Footer*/
+				position: absolute;
+				width: 80%;
+				height: 35%;
+			}
+			
+			@media screen and (min-width: 800px){
+				h1{
+					font-size: 50px;
+				}
+				
+				h3{
+					font-size: 30px;
+				}
+				
+				p{
+					font-size: 19px;
+				}
+				
+				.alinhar-menu{
+					display: -webkit-flex;
+					display: flex;
+				}
+				.esq{
+					margin-left: 5%;
+					margin-right: 5%;
+				}
+				
+				.dir {
+					margin-left: 5%;
+					margin-right: 0%;
+					width: 150%;
+				}
+				
+				.formDir{
+					float: right;
+					width:50%;
+				}
+				
+				.formEsq{
+					float: left;
+					width:50%;
+				}
+		</style>
+		
+		
+		
+		
+	</head>
+	
+	<body>
+		<div id="opacidade__header">
+			<object id="importHeader" type="text/html" data="header.html"></object>
+		</div>
+		</br>
+		
+		<div id="fundo">
+		</br>
+		</br>
+		</br>
+		</br>
+		</br>
+		</br>
+		</br>
+			<h1>Conheça Nossa História</h1>
+			</br>
+			<div class="alinhar-menu">
+			<div class="dir">
+				<img src="imagens/minnie.png" width="100%">
+			</div>
+			<div class="esq">
+				<p>A Lojinha de Bolos da Dani foi uma ideia que surgiu em 2016 
+				e colocado em prática no início de 2017, aos poucos tem se tornado 
+				uma da mais conhecidas de São José dos Campos, vendendo centenas 
+				de bolos todos os meses para os mais fieis clientes. A grande variedade
+				e qualidade nos produtos tem tornado nossa Loja cada vez mais famosa 
+				e procurada.</p>
+				</br>
+				<h3>Entre em Contato Conosco</h3>
+				</br>
+				<form action="">
+			<fieldset>
+				<legend><h4>Formulário de Encomenda</h4></legend>
+				<div class="formEsq">
+				<center>Nome: </br><input type="text" name="nome" placeholder="PrimeiroNome"></br>
+				</br>
+				Sobrenome: </br><input type="text" name="sobreNome"></br>
+				</br>
+				Email: </br><input type="email" name="email" placeholder="email@exemplo.com"></br>
+				</br>
+				Tel: </br><input type="tel" name="tel" placeholder="(xx)xxxx-xxxx" style="width:100px;">
+				</center>
+				</div>
+				<div class="formDir">
+					<center>Digite Aqui Sua Mensagem:</center>
+					<input type="text" name="msg" placeholder="Mensagem" style="width:90%; height: 30%;">
+				</br>
+				</br>
+				<center>
+					<input type="submit" id="botao" name="botao" value="Enviar">
+				</center>
+				</div>
+				</fieldset>
+				
+			</form>
+			</div>
+			</div>
+		</br>
+		</br>
+		</br>
+		</br>
+		</br>
+		</br>
+		</br>
+		</br>
+		
+		</div> <!-- Fexa a div fundo -->
+		
+		<script type="text/javascript">
+			/* OPACIDADE DO HEADER */
+			window.onscroll = function(){
+				var top = window.pageYOffset || document.documentElement.scrollTop
+				if( top > 120 ) {
+					document.getElementById("opacidade__header").style.opacity = "0.8";
+				} else{
+					document.getElementById("opacidade__header").style.opacity = "1";
+				}
+			}
+			
+			/* botão de Envio */
+			document.getElementById("botao").onclick = function(){
+				alert("Mensagem enviada com sucesso");
+				//window.open('index.html');
+			}
+			/*
+			function envio() {
+			var r=confirm("Tem certeza que deseja enviar as informações?");
+			if (r==true) {
+				window.location="paginaenvio.html";
+				teste.submit();
+				}
+			}*/
+			
+			
+		</script>
+		<object id="importFooter" type="text/html" data="footer.html"></object>
+	</body>
+
+
+
+
+
+
+
+</html>
